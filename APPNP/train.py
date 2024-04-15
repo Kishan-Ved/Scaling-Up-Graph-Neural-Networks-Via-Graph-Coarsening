@@ -23,6 +23,7 @@ parser.add_argument('--K', type=int, default=10)
 parser.add_argument('--alpha', type=float, default=0.1)
 parser.add_argument('--coarsening_ratio', type=float, default=0.5)
 parser.add_argument('--coarsening_method', type=str, default='variation_neighborhoods')
+parser.add_argument('--num_layers', type=int, default=2)
 args = parser.parse_args()
 path = "params/"
 if not os.path.isdir(path):
@@ -83,8 +84,9 @@ for _ in range(args.runs):
     model.eval()
     pred = model(data.x, data.edge_index).max(1)[1]
     test_acc = int(pred[data.test_mask].eq(data.y[data.test_mask]).sum().item()) / int(data.test_mask.sum())
-    print(test_acc)
+    # print(test_acc)
     all_acc.append(test_acc)
 
-print('ave_acc: {:.4f}'.format(np.mean(all_acc)), '+/- {:.4f}'.format(np.std(all_acc)))
+print('num_layers: ',args.num_layers,', ave_acc: {:.4f}'.format(np.mean(all_acc)), '+/- {:.4f}'.format(np.std(all_acc)))
+
 
