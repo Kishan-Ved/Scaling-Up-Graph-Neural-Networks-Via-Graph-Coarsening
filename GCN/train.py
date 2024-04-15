@@ -20,6 +20,7 @@ if __name__ == '__main__':
     parser.add_argument('--normalize_features', type=bool, default=True)
     parser.add_argument('--coarsening_ratio', type=float, default=0.5)
     parser.add_argument('--coarsening_method', type=str, default='variation_neighborhoods')
+    parser.add_argument('--num_layers', type=int, default=2)
     args = parser.parse_args()
     path = "params/"
     if not os.path.isdir(path):
