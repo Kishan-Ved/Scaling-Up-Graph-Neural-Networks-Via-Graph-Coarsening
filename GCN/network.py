@@ -18,8 +18,9 @@ class Net(torch.nn.Module):
             module.reset_parameters()
 
     def forward(self, x, edge_index):
-        for i in range(self.num_layers):
+        for i in range(self.num_layers-1):
             x = self.conv[i](x, edge_index)
             x = F.relu(x)
             x = F.dropout(x, training=self.training)
+        x = self.conv[self.num_layers-1](x, edge_index)
         return F.log_softmax(x, dim=1)

@@ -5,6 +5,9 @@ from graph_coarsening.coarsening_utils import *
 from torch_geometric.datasets import Coauthor
 from torch_geometric.datasets import CitationFull
 
+import warnings
+warnings.filterwarnings("ignore")
+
 def one_hot(x, class_count):
     return torch.eye(class_count)[x, :]
 
@@ -178,7 +181,7 @@ def load_data(dataset, candidate, C_list, Gc_list, exp):
             coarsen_node += H.W.shape[0]
         number += 1
 
-    print('the size of coarsen graph features:', coarsen_features.shape)
+    # print('the size of coarsen graph features:', coarsen_features.shape)
 
     coarsen_edge = torch.LongTensor([coarsen_row, coarsen_col])
     coarsen_train_labels = coarsen_train_labels.long()

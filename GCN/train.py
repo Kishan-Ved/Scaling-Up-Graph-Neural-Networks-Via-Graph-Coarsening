@@ -79,8 +79,8 @@ if __name__ == '__main__':
         model.eval()
         pred = model(data.x, data.edge_index).max(1)[1]
         test_acc = int(pred[data.test_mask].eq(data.y[data.test_mask]).sum().item()) / int(data.test_mask.sum())
-        print(test_acc)
+        # print(test_acc)
         all_acc.append(test_acc)
 
-    print('ave_acc: {:.4f}'.format(np.mean(all_acc)), '+/- {:.4f}'.format(np.std(all_acc)))
+    print('num_layers: ',args.num_layers,', ave_acc: {:.4f}'.format(np.mean(all_acc)), '+/- {:.4f}'.format(np.std(all_acc)))
 
