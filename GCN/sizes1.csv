@@ -1,0 +1,77 @@
+
+
+Dataset,cora
+Coarsening ratio,0.0
+Name,Size
+data,2520
+coarsen features,184
+coarsen train labels,184
+coarsen train mask,184
+coarsen val labels,184
+coarsen val mask,184
+coarsen edge,184
+data.x,184
+data.y,184
+data.edge_index,184
+Total,4176
+
+Dataset,cora
+Coarsening ratio,0.1
+Name,Size
+data,2520
+coarsen features,184
+coarsen train labels,184
+coarsen train mask,184
+coarsen val labels,184
+coarsen val mask,184
+coarsen edge,184
+data.x,184
+data.y,184
+data.edge_index,184
+Total,4176
+
+Dataset,cora
+Coarsening ratio,0.3
+Name,Size
+data,2520
+coarsen features,184
+coarsen train labels,184
+coarsen train mask,184
+coarsen val labels,184
+coarsen val mask,184
+coarsen edge,184
+data.x,184
+data.y,184
+data.edge_index,184
+Total,4176
+
+Dataset,cora
+Coarsening ratio,0.5
+Name,Size
+data,2520
+coarsen features,184
+coarsen train labels,184
+coarsen train mask,184
+coarsen val labels,184
+coarsen val mask,184
+coarsen edge,184
+data.x,184
+data.y,184
+data.edge_index,184
+Total,4176
+
+Dataset,cora
+Coarsening ratio,0.7
+Name,Size
+data,2520
+coarsen features,184
+coarsen train labels,184
+coarsen train mask,184
+coarsen val labels,184
+coarsen val mask,184
+coarsen edge,184
+data.x,184
+data.y,184
+data.edge_index,184
+Total,4176
+
